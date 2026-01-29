@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HTML5 Elements</title>
+</head>
+<body>
+
+HTML 5 color Element<br>
+Select your favorite color:
+<input type="color">
+<br>
+<input type="submit" value="Submit">
+
+<br><br>
+
+HTML 5 input restriction as number<br>
+Quantity (between 1 and 5):
+<input type="number" min="1" max="5">
+<input type="submit" value="Send">
+
+<br><br>
+
+HTML 5 data Encryption<br>
+Username:
+<input type="text" value="admin">
+Encryption:
+<select>
+    <option>2048 (High Grade)</option>
+</select>
+<input type="submit" value="Submit">
+
+<br><br>
+
+HTML 5 date picker<br>
+Birthday:
+<input type="date">
+<input type="submit" value="Send">
+
+<br><br>
+
+HTML 5 Audio Element<br>
+<audio controls>
+    <source src="" type="audio/mpeg">
+</audio>
+
+<br><br>
+
+HTML 5 CANVAS (graphics and text)<br>
+
+<canvas id="myCanvas" width="300" height="100" style="border:1px solid #000000;">
+    Your browser does not support the HTML5 canvas tag.
+</canvas>
+
+<script>
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+    ctx.font = "40px Arial"; 
+    ctx.fillText("Hello World", 10, 60);
+</script>
+
+</body>
+</html>
