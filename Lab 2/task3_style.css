@@ -1,0 +1,131 @@
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Times New Roman', serif; /* Matching screenshot font */
+        }
+
+        body {
+            padding: 20px;
+            background-color: white;
+        }
+
+        h3 {
+            margin-top: 30px;
+            margin-bottom: 5px;
+            color: #333;
+            font-family: Arial, sans-serif;
+        }
+
+        /* --- COMMON MENU STYLING --- */
+        .menu-container {
+            width: 100%;
+            overflow: hidden; /* Clears floats */
+            margin-bottom: 20px;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            float: left; /* Makes items horizontal */
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 15px 25px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 14px;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+        }
+
+        /* =========================================
+           1. SIMPLE MENU (Black Background)
+           ========================================= */
+        .menu1 {
+            background-color: black;
+        }
+
+        /* =========================================
+           2. FONT SIZE HOVER (Red Background)
+           ========================================= */
+        .menu2 {
+            background-color: red;
+        }
+
+        .menu2 li a:hover {
+            font-size: 18px; /* Grows bigger on hover */
+        }
+
+        /* =========================================
+           3. BORDER MENU (Black + Cyan Borders)
+           ========================================= */
+        .menu3 {
+            background-color: black;
+        }
+
+        .menu3 li {
+            /* Cyan border on the right of each item */
+            border-right: 2px solid cyan;
+        }
+
+        .menu3 li:last-child {
+            border: none; /* Remove border from the last item */
+        }
+
+        .menu3 li a:hover {
+            background-color: #333; /* Slight background change */
+            color: cyan;
+        }
+
+        /* =========================================
+           4. ACTIVE TAB MENU (Green Active State)
+           ========================================= */
+        .menu4 {
+            background-color: black;
+        }
+
+        /* The "Active" class makes the Home button Green */
+        .menu4 .active {
+            background-color: #99ff99; /* Light Green */
+            color: white; /* Keep text white or change to match design */
+        }
+
+        /* Hover effect for non-active items */
+        .menu4 li a:hover:not(.active) {
+            color: #99ff99; /* Text turns green on hover */
+        }
+
+        /* =========================================
+           5. RESPONSIVE MENU (Stacks on Mobile)
+           ========================================= */
+        .menu5 {
+            background-color: #555; /* Dark Grey */
+        }
+
+        .menu5 .active {
+            background-color: #99ff99; /* Light Green Home */
+            color: white; 
+        }
+
+        /* --- MEDIA QUERY FOR MOBILE PHONES --- */
+        /* When screen width is 600px or less, change layout */
+        @media screen and (max-width: 600px) {
+            .menu5 li {
+                float: none; /* Stop floating left */
+                width: 100%; /* Make each item take full width */
+                border-bottom: 1px solid #777; 
+            }
+            
+            .menu5 li a {
+                text-align: center;
+                padding: 20px; 
+            }
+        }
