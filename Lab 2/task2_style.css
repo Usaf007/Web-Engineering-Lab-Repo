@@ -4,27 +4,22 @@
             box-sizing: border-box;
         }
 
-        /* 2. ENABLE SMOOTH SCROLLING */
         html {
-            scroll-behavior: smooth; /* This creates the scroll animation */
+            scroll-behavior: smooth; 
         }
 
         body {
             font-family: 'Times New Roman', Times, serif;
         }
 
-        /* --- NAVIGATION BAR (FIXED) --- */
         .navbar {
             width: 100%;
             height: 60px;
             background-color: black;
-            
-            /* Keeps the navbar stuck to the top while scrolling */
             position: fixed; 
             top: 0;
             left: 0;
-            z-index: 1000; /* Ensures it stays on top of other content */
-
+            z-index: 1000;
             display: flex; 
             justify-content: space-between;
             align-items: center; 
@@ -45,40 +40,37 @@
             color: #ccc;
         }
 
-        /* --- GENERIC SECTION STYLE --- */
         section {
             width: 100%;
-            height: 100vh; /* 100% of Viewport Height (Full Screen) */
+            height: 100vh; 
             
             display: flex;
             justify-content: center;
             align-items: center;
         }
 
-        /* --- BIG TEXT STYLE --- */
         h1 {
             font-size: 80px;
             font-weight: bold;
             color: black;
         }
 
-        /* --- INDIVIDUAL COLORS FOR EACH SECTION --- */
         #home {
             background-color: cyan;
         }
 
         #services {
-            background-color: #ff9999; /* Light Red */
+            background-color: #ff9999; 
         }
 
         #portfolio {
-            background-color: #99ff99; /* Light Green */
+            background-color: #99ff99; 
         }
 
         #about {
-            background-color: #ffff99; /* Light Yellow */
+            background-color: #ffff99; 
         }
 
         #contact {
-            background-color: #cc99ff; /* Light Purple */
+            background-color: #cc99ff;
         }
