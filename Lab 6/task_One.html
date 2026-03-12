@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lab 6 - Task 1 : Hoisting</title>
+</head>
+<body>
+
+    <script>
+        // 1. Exploring 'var' hoisting
+        console.log("var output: ", hoistedVar); // Output: undefined
+        var hoistedVar = "I am a var variable";
+
+        // 2. Exploring 'let' hoisting
+        try {
+            console.log(hoistedLet); 
+        } catch (error) {
+            console.log("let output error: ", error.name); // Output: ReferenceError
+        }
+        let hoistedLet = "I am a let variable";
+
+        // 3. Exploring 'const' hoisting
+        try {
+            console.log(hoistedConst);
+        } catch (error) {
+            console.log("const output error: ", error.name); // Output: ReferenceError
+        }
+        const hoistedConst = "I am a const variable";
+    </script>
+</body>
+</html>

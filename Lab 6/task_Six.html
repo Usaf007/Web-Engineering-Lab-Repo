@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lab 6 - Task 6 : Promises</title>
+</head>
+<body>
+    <script>
+        // 1. Rewrite getData to return a Promise
+        function getData() {
+            // A Promise takes an arrow function with two built-in parameters: resolve and reject
+            return new Promise((resolve, reject) => {
+                console.log("Promise State: Pending (Fetching data...)");
+                
+                let success = true; // Try changing this to false later!
+                
+                // Simulating a 2-second network request
+                setTimeout(() => {
+                    if (success) {
+                        resolve("User Profile Information"); // Data fetched successfully!
+                    } else {
+                        reject("Network Error: Could not fetch data."); // Something went wrong!
+                    }
+                }, 2000);
+            });
+        }
+
+        // 2. Call the function and chain .then() and .catch()
+        getData()
+            .then((message) => {
+                // This runs ONLY if resolve() is called
+                console.log("Promise State: Fulfilled -> " + message); 
+            })
+            .catch((error) => {
+                // This runs ONLY if reject() is called
+                console.log("Promise State: Rejected -> " + error);
+            });
+    </script>
+</body>
+</html>

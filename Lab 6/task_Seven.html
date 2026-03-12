@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lab 6 - Task 7 : Async / Await</title>
+</head>
+<body>
+    <script>
+        // 1. We keep the exact same Promise-returning function from Task 6
+        function getData() {
+            return new Promise((resolve, reject) => {
+                let success = true; // Change to false to test the catch block!
+                
+                setTimeout(() => {
+                    if (success) {
+                        resolve("User Profile Information");
+                    } else {
+                        reject("Network Error: Could not fetch data.");
+                    }
+                }, 2000);
+            });
+        }
+
+        // 2. Create an async function to consume the promise
+        async function fetchAndProcessData() {
+            console.log("Starting async function... waiting for data.");
+            
+            try {
+                // 3. The 'await' keyword pauses execution here until the Promise resolves
+                let result = await getData(); 
+                
+                // This line will ONLY run if the promise is successfully resolved
+                console.log("Await Successful -> " + result); 
+            } 
+            catch (error) {
+                // 4. If the promise is rejected, the code immediately jumps here
+                console.log("Await Failed (Caught Error) -> " + error);
+            }
+        }
+
+        // 5. Call the async function
+        fetchAndProcessData();
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lab 6 - Task 4 : Callbacks</title>
+</head>
+<body>
+    <script>
+        // 1. Implement processData that receives data and logs it
+        function processData(data) {
+            console.log("Process Data: Successfully received -> " + data);
+        }
+
+        // 2. Implement getData that accepts a callback
+        function getData(callback) {
+            console.log("Get Data: Fetching information from database...");
+            
+            // Pretend we got some data
+            let fetchedData = "User Profile Information"; 
+            
+            // 3. Execute the callback function and pass the data to it
+            callback(fetchedData); 
+        }
+
+        // 4. Pass processData as a callback to getData
+        getData(processData); 
+    </script>
+</body>
+</html>

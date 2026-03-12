@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lab 6 - Task 5 : Asynchronous Callbacks</title>
+</head>
+<body>
+    <script>
+        // 1. The Callback Function (what to do when data arrives)
+        function displayUserData(user) {
+            console.log("Success! Data Received: " + user);
+        }
+
+        // 2. The Asynchronous Function
+        function fetchUserData(callback) {
+            console.log("1. Fetching user data... please wait 10 seconds.");
+            
+            // 3. setTimeout takes an arrow function and a time in milliseconds
+            setTimeout(() => {
+                let fetchedUser = "Yousaf Atiq (SE Student)"; // Pretend we got this from a database
+                callback(fetchedUser); // Run the callback after the timer finishes
+            }, 10000); 
+        }
+
+        // 4. Trigger the process
+        fetchUserData(displayUserData);
+        
+        // 5. Proof of Asynchronous execution
+        console.log("2. I am printing immediately! I did not wait for the 10 seconds.");
+    </script>
+</body>
+</html>
